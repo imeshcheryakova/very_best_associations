@@ -4,9 +4,26 @@
 
 <div class="row">
   <div class="col-md-12">
-    <dl class="dl-horizontal">
+    <ul class="dl-horizontal">
       <dt>Username</dt>
       <dd><%= @user.username %></dd>
+
+    <dt>Favorites</dt>
+
+
+    <dd>
+      <ul class="list-group">
+
+        <% @user.favorites.each do |favorite| %>
+            <li class="list-group-item">
+              <%=favorite.dish.name %> at <%=favorite.venue.name %>
+            </li>
+        <% end %>
+      </ul>
+    </dd>
+
+
+    </dl>
 
     </dl>
 

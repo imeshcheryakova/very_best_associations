@@ -10,6 +10,15 @@
 
     </dl>
 
+    <ul class="list-group">
+
+      <% @cuisine.dishes.each do |dish| %>
+          <li class="list-group-item">
+            <%=dish.name %>
+          </li>
+      <% end %>
+    </ul>
+
     <div class="btn-group btn-group-justified">
       <a href="/cuisines" class="btn btn-primary">
         Back

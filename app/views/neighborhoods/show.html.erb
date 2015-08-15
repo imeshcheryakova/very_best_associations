@@ -10,7 +10,30 @@
 
       <dt>City</dt>
       <dd><%= @neighborhood.city %></dd>
+      <dt>Venues</dt>
+<dd>
 
+<ul class="list-group">
+
+  <%@neighborhood.venues.each do |venue| %>
+    <li class="list-group-item">
+                <%=venue.name %>
+  </li>
+      <% end %>
+</ul>
+</dd>
+
+    <dt>Favorites</dt>
+    <dd>
+      <ul class="list-group">
+
+        <% @neighborhood.favorites.each do |favorite| %>
+            <li class="list-group-item">
+              <%=favorite.dish.name %> at <%=favorite.venue.name %> by <%=favorite.user.username %>
+            </li>
+        <% end %>
+      </ul>
+    </dd>
     </dl>
 
     <div class="btn-group btn-group-justified">
