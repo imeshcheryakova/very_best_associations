@@ -21,6 +21,44 @@
             <%=favorite.venue.name %> by <%=favorite.user.username %>
           </li>
       <% end %>
+
+
+      <li class="list-group-item">
+        <form action="/create_favorite" method="post">
+
+          <!-- Hidden input for authenticity token to protect from forgery -->
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+
+          <div class="form-group">
+            <label for="user_id" class="control-label">
+              User
+            </label>
+            <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="venue_id" class="control-label">
+              Venue
+            </label>
+            <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="">
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="control-label">
+              Notes
+            </label>
+            <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="">
+          </div>
+
+          <input name="dish_id" type="hidden" value="<%= @dish.id %>">
+
+          <button class="btn btn-success btn-block">
+            Create Venue
+          </button>
+        </form>
+      </li>
+
     </ul>
 </dd>
     </dl>
