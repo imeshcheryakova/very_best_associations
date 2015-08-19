@@ -23,17 +23,7 @@
 
           <% @venue.favorites.each do |favorite| %>
               <li class="list-group-item">
-                <%=favorite.user.username %>
-              </li>
-          <% end %>
-        </ul>
-      </dd>
-      <dd>
-        <ul class="list-group">
-
-          <% @venue.favorites.each do |favorite| %>
-              <li class="list-group-item">
-                <%=favorite.dish.name %>
+                 <%=favorite.dish.name %> by <%=favorite.user.username %>
               </li>
           <% end %>
         </ul>

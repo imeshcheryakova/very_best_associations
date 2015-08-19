@@ -8,8 +8,11 @@
       <dt>Name</dt>
       <dd><%= @cuisine.name %></dd>
 
-    </dl>
 
+      <!-- Why is this venues on the target app? Mistake?
+        <dt> Venues</dt> -->
+        <dt> Dishes</dt>
+      <dd>
     <ul class="list-group">
 
       <% @cuisine.dishes.each do |dish| %>
@@ -41,6 +44,8 @@
       </li>
 
     </ul>
+      </dd>
+    </dl>
 
     <div class="btn-group btn-group-justified">
       <a href="/cuisines" class="btn btn-primary">
